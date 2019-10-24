@@ -206,7 +206,19 @@
                 </div>
             </div>
             <div class="row p-1 p-md-1 border border-dark m-1 m-md-1">
-                <div class="col-3">
+                <div class="col-1 col-md-1 mw-100">
+                    <div class="row">
+                        <div class="col">
+                            <a class="btn btn-sm btn-success" id="on">Apri</a> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <a class="btn btn-sm btn-danger" id="off">Chiudi</a> 
+                        </div>
+                    </div>
+                </div>                 
+                <div class="col-3 mw-100">
                     <div class="row">
                         <a class="btn btn-sm btn-secondary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Saldi Corrisp.</a>
                         <div class="collapse multi-collapse" id="multiCollapseExample1">
@@ -269,7 +281,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-3 mw-100">
                     <div class="row">
                         <a class="btn btn-sm btn-secondary" data-toggle="collapse" href="#multiCollapseExample13" role="button" aria-expanded="false" aria-controls="multiCollapseExample13">Tipi Conto</a>
                         <div class="collapse multi-collapse" id="multiCollapseExample13">
@@ -332,7 +344,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-3 mw-100">
                     <div class="row">
                         <a class="btn btn-sm btn-secondary" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Stato Gestionale</a>
                         <div class="collapse multi-collapse" id="multiCollapseExample3">
@@ -398,7 +410,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-2 mw-100">
                     <div class="row">
                         <a class="btn btn-sm btn-secondary" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">Stato Liquidazione</a>
                         <div class="collapse multi-collapse" id="multiCollapseExample4">
@@ -469,7 +481,7 @@
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
         <script>
-                      $('.datepicker').datepicker({
+                $('.datepicker').datepicker({
                         autoclose: true,
                         format: " yyyy",
                         viewMode: "years", 
@@ -477,6 +489,21 @@
                         startDate: '2014',
                         endDate: new Date(),
                     });
+           
+
+            $(document).ready(function() {         
+                
+              $('#off').click(function() {
+                  $('.collapse').collapse('hide')
+              });
+                
+              $('#on').click(function() {
+                  $('.collapse').collapse('show')
+              });
+                
+            });
+        
+       
           </script>
     </body>
 </html>
